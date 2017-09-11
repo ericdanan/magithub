@@ -182,6 +182,7 @@ See also URL
     (-find #'file-readable-p combinations)))
 
 (defun magithub-pull-request-new (repo title base head)
+  "When you start writing a new PR, don't select the remote branch (e.g., origin/develop) for your head – select your local tracking branch. As long as the names match up, this should work for now."
   (interactive
    (let* ((repo        (magithub-repo))
           (upstream    (magit-get-upstream-branch))
